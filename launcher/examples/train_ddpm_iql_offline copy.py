@@ -75,14 +75,15 @@ def main(_):
 
     filtered_variants = []
     for variant in variants:
-        variant['rl_config']['T'] = variant['T']
+        #variant['rl_config']['T'] = variant['T']
         variant['rl_config']['beta_schedule'] = variant['beta_schedule']
         variant['inference_variants'] = inference_variants
             
-        if 'antmaze' in variant['env_name']:
-            variant['rl_config']['critic_hyperparam'] = 0.9
-        else:
-            variant['rl_config']['critic_hyperparam'] = 0.7
+        # if 'antmaze' in variant['env_name']:
+        #     variant['rl_config']['critic_hyperparam'] = 0.9
+        # else:
+        #     variant['rl_config']['critic_hyperparam'] = 0.7
+        variant['rl_config']['critic_hyperparam'] = 0.7
 
         filtered_variants.append(variant)
 
