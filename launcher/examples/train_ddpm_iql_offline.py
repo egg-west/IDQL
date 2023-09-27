@@ -77,7 +77,7 @@ def main(_):
     filtered_variants = []
     for variant in variants:
         #variant['rl_config']['T'] = variant['T']
-        variant['rl_config']['beta_schedule'] = variant['beta_schedule']
+        #variant['rl_config']['beta_schedule'] = variant['beta_schedule']
         variant['inference_variants'] = inference_variants
             
         # if 'antmaze' in variant['env_name']:
