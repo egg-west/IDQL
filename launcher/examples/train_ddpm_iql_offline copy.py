@@ -3,8 +3,7 @@ import os
 import numpy as np
 from absl import app, flags
 
-#from examples.states.train_diffusion_offline import call_main
-from examples.states.idql import call_main
+from examples.states.train_diffusion_offline import call_main
 from launcher.hyperparameters import set_hyperparameters
 
 
@@ -13,7 +12,7 @@ flags.DEFINE_integer('variant', 0, 'Logging interval.')
 
 
 def main(_):
-    constant_parameters = dict(project='idql-humanoide',
+    constant_parameters = dict(project='offline_schedule_final',
                                experiment_name='ddpm_iql',
                                max_steps=1500001, #Actor takes two steps per critic step
                                batch_size=2048, #Actor batch size x 2 (so really 1024), critic is fixed to 256
